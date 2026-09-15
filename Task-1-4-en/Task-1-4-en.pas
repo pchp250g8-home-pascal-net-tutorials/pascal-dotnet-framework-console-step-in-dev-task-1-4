@@ -11,8 +11,10 @@ begin
   var m3 := 24 * 60; // Midnight time (hours per day) translated into minutes 
   var dm := m3 - m2; // Remaining time until midnight In minutes
   var h2 := dm div 60; // Remaining time until midnight in full hours
-  m2 := dm mod 60; // Remaining quantity Of minutes until End Of the hour Is calculated before
+  // Remaining quantity Of minutes until End Of the hour Is calculated before
+  m2 := dm mod 60; 
   // --Output of information to display--
+  Console.WriteLine($'Current time: {h1} : {m1}');
   Console.WriteLine($'{h2} : {m2} is remaining until midnight.');
   Console.Read(); // Press key "Enter" to close window
 end.
